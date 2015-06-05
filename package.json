@@ -1,0 +1,12 @@
+{
+    "name": "brackets.google-search",
+    "title": "Google Search",
+    "description": "Search Google from Brackets",
+    "version": "1.0.0",
+    "author": "Nawfal",
+    "license": "MIT",
+    "homepage": "https://github.com/nawfalCode/GoogleSeachBrackets",
+    "engines": {
+        "brackets": ">=0.31.0"
+    }
+}

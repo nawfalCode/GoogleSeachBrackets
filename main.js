@@ -6,24 +6,14 @@ define(function (require, exports, module) {
     var right_click_search = "RightClickExtended.SearchHandler";
     var AppInit = brackets.getModule("utils/AppInit");
 
-    //   var strings = require("strings");
+    var strings = require("strings");
     /**
         Logs into System Console
         @param 
         @Input: String represnts the message to be printed to console
         @return None
     */
-    var strings = {
-        RIGHT_CLICK_SEARCH_TITLE: "Search in Google",
-        USER_NOT_FOUND: 'Please Enter User Name',
-        TEAM_NOT_FOUND: 'Please Enter Team Directory Name',
-        SETTINGS_SHORTCUT: 'Ctrl-Shift-I',
-        SETTINGS_MENU_TITLE: 'ENG1003 Settings',
-        UPLOAD_SHORTCUT: 'Ctrl-Shift-U',
-        UPLOAD_NEMU_TITLE: 'ENG1003 Uploader',
-        STORAGE_KEY: 'Eng1003Uploader.Monash'
-    }
-    module.exports = strings;
+
 
     function log(msg) {
 
@@ -40,7 +30,8 @@ define(function (require, exports, module) {
 
         var thisEditor = EditorManager.getCurrentFullEditor();
         var keyword = thisEditor._codeMirror.getSelection();
-        if (keyword.length > 0) { // if the user has selected (highlited) something
+        console.log(keyword);
+        if ((keyword.length > 0)) { // if the user has selected (highlited) something; the plugin accepts the blank strings to open blank tabs
             var url = "https://www.google.com.au/search?q=" + keyword;
             brackets.app.openURLInDefaultBrowser(url);
         }
@@ -51,6 +42,7 @@ define(function (require, exports, module) {
     */
 
     AppInit.appReady(function () {
+        log(strings);
         CommandManager.register(strings.RIGHT_CLICK_SEARCH_TITLE, right_click_search, handleRightClickSearch);
         Menus.getContextMenu(Menus.ContextMenuIds.EDITOR_MENU).addMenuDivider();
         Menus.getContextMenu(Menus.ContextMenuIds.EDITOR_MENU).addMenuItem(right_click_search);
