@@ -10,7 +10,7 @@ It is available via the Brackets Extension Registry. Click on the Extension Mana
 
 Using
 ------
-Simply, highlight text, right click and select Search with Google.
+Simply, highlight text, right click and select Google it, Wikipedia it, Youtube it, or Stackoverflow it.  
 
 Releases
 --------
