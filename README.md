@@ -1,7 +1,7 @@
-Serach Google From Brackets 
+Serach Google, Wikipedia, Youtube, and Stackoverflow From Brackets 
 ================
 
-This extension adds the ability to search highlighted keywords from brackets in Google.
+This extension adds the ability to search highlighted keywords from brackets in Google, Wikipedia, Youtube, and Stackoverflow.
 
 --
 Install

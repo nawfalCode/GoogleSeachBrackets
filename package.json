@@ -1,9 +1,9 @@
 {
     "name": "brackets.google-search",
-    "title": "Google Search",
-    "description": "Search Google from Brackets",
-    "version": "1.0.0",
-    "author": "Nawfal",
+    "title": "Highlight and Search",
+    "description": "Serach Google, Wikipedia, Youtube, and Stackoverflow From Brackets ",
+    "version": "1.1.0",
+    "author": "Nawfal Mahdi",
     "license": "MIT",
     "homepage": "https://github.com/nawfalCode/GoogleSeachBrackets",
     "engines": {
