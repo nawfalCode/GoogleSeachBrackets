@@ -14,4 +14,4 @@ Simply, highlight text, right click and select Search with Google.
 
 Releases
 --------
-June 5, 2015: 1.0.0 Release
+June 5, 2015: 1.1.0 Release
