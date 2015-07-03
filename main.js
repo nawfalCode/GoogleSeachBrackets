@@ -1,4 +1,4 @@
-define(function (require, exports, module) {
+define(function(require, exports, module) {
     "use strict";
     var CommandManager = brackets.getModule("command/CommandManager");
     var Menus = brackets.getModule("command/Menus");
@@ -7,7 +7,7 @@ define(function (require, exports, module) {
     var right_click_search_Wiki = "RightClickExtended.SearchWiki";
     var right_click_search_youtube = "RightClickExtended.Searchyoutube";
     var right_click_search_stackoverflow = "RightClickExtended.Searchstackoverflow";
-    
+
     var AppInit = brackets.getModule("utils/AppInit");
 
     var strings = require("strings");
@@ -40,8 +40,8 @@ define(function (require, exports, module) {
             brackets.app.openURLInDefaultBrowser(url);
         }
     }
-    
-        function handleRightClickSearchWiki() {
+
+    function handleRightClickSearchWiki() {
 
         var thisEditor = EditorManager.getCurrentFullEditor();
         var keyword = thisEditor._codeMirror.getSelection();
@@ -51,8 +51,8 @@ define(function (require, exports, module) {
             brackets.app.openURLInDefaultBrowser(url);
         }
     }
-    
-            function handleRightClickSearchYoutube() {
+
+    function handleRightClickSearchYoutube() {
 
         var thisEditor = EditorManager.getCurrentFullEditor();
         var keyword = thisEditor._codeMirror.getSelection();
@@ -62,7 +62,8 @@ define(function (require, exports, module) {
             brackets.app.openURLInDefaultBrowser(url);
         }
     }
-                function handleRightClickSearchStackOverFlow() {
+
+    function handleRightClickSearchStackOverFlow() {
 
         var thisEditor = EditorManager.getCurrentFullEditor();
         var keyword = thisEditor._codeMirror.getSelection();
@@ -72,29 +73,29 @@ define(function (require, exports, module) {
             brackets.app.openURLInDefaultBrowser(url);
         }
     }
-    
-    
-    
-    
+
+
+
+
 
     /**
         System Initialization, Command Registratios, and event handlers
     */
 
-    AppInit.appReady(function () {
+    AppInit.appReady(function() {
         log(strings);
         CommandManager.register(strings.RIGHT_CLICK_SEARCH_TITLE_GOOGLE, right_click_search_goolge, handleRightClickSearchGoolge);
         CommandManager.register(strings.RIGHT_CLICK_SEARCH_TITLE_WIKI, right_click_search_Wiki, handleRightClickSearchWiki);
         CommandManager.register(strings.RIGHT_CLICK_SEARCH_TITLE_YOUTUBE, right_click_search_youtube, handleRightClickSearchYoutube);
         CommandManager.register(strings.RIGHT_CLICK_SEARCH_TITLE_STACKOVERFLOW, right_click_search_stackoverflow, handleRightClickSearchStackOverFlow);
-        
-        
-        
+
+
+
         Menus.getContextMenu(Menus.ContextMenuIds.EDITOR_MENU).addMenuDivider();
         Menus.getContextMenu(Menus.ContextMenuIds.EDITOR_MENU).addMenuItem(right_click_search_goolge);
         Menus.getContextMenu(Menus.ContextMenuIds.EDITOR_MENU).addMenuItem(right_click_search_Wiki);
         Menus.getContextMenu(Menus.ContextMenuIds.EDITOR_MENU).addMenuItem(right_click_search_youtube);
         Menus.getContextMenu(Menus.ContextMenuIds.EDITOR_MENU).addMenuItem(right_click_search_stackoverflow);
-    
+
     });
 });
